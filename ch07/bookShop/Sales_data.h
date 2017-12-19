@@ -8,6 +8,13 @@ using namespace std;
 class Sales_data
 {
 public:
+    //添加构造函数
+    Sales_data() = default; //默认构造函数
+    Sales_data(const string& s) : bookNo(s) {}   //用s来初始化bookNo，其他的默认初始化
+    Sales_data(const string &s, unsigned n, double p) :
+        bookNo(s), units_sold(n), revenue(p*n) {}   //构造函数初始值列表
+    Sales_data (istream&);  //通过输入来定义构造函数，这只是声明，需要在类外定义
+
     string isbn() const {return bookNo;}
     Sales_data& combine(const Sales_data&);
     double avg_price() const;
@@ -45,6 +52,7 @@ ostream& print(ostream& os, Sales_data& item)  //打印函数
     os << item.isbn() << " " << item.units_sold << " " << item.revenue << " " << item.avg_price();
     return os;
 }
+
 //加法函数
 Sales_data add(const Sales_data &item1, const Sales_data &item2) {
     Sales_data newBook;
@@ -53,6 +61,11 @@ Sales_data add(const Sales_data &item1, const Sales_data &item2) {
         newBook.revenue = item1.revenue + item2.revenue;
     }
     return newBook;
+}
+
+//类外定义构造函数
+Sales_data::Sales_data(istream &is){
+    read(is, *this);    //read函数的作用是从is中读取信息存入this中
 }
 
 #endif // SALES_DATA_H_INCLUDED
