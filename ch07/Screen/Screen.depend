@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1513865158 source:f:\自学代码\c++ primer\exercise\ch07\screen\main.cpp
+	<iostream>
+	"Screen.h"
+
+1513865934 f:\自学代码\c++ primer\exercise\ch07\screen\screen.h
+	<iostream>
+	<string>
+
