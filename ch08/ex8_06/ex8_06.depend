@@ -1,10 +1,10 @@
 # depslib dependency file v1.0
-1514202540 source:f:\自学代码\c++ primer\exercise\ch08\ex8_06\main.cpp
+1514203601 source:f:\自学代码\c++ primer\exercise\ch08\ex8_06\main.cpp
 	"BookShop.h"
 	<fstream>
 	<iostream>
 
-1514195281 f:\自学代码\c++ primer\exercise\ch08\ex8_06\bookshop.h
+1514202624 f:\自学代码\c++ primer\exercise\ch08\ex8_06\bookshop.h
 	<iostream>
 	<string>
 
