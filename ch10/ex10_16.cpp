@@ -20,7 +20,7 @@ void biggies(vector<string>& vs, size_t sz) {
                 [](const string& str1, const string& str2){return str1.size()<str2.size();});
 
     auto wc = partition(vs.begin(), vs.end(),
-                        [sz](const string& str) {return str.size() >= sz;});
+                        [sz](const string& str) {return str.size() >= sz;});    //²¶»ñsz
 
     int num = 0;
     cout << "all the letter whose length more than " << sz << " are : " << endl;
