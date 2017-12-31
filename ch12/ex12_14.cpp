@@ -4,6 +4,7 @@
 
 using namespace std;
 
+//连接类
 struct connection
 {
     string ip;
@@ -11,6 +12,7 @@ struct connection
     connection(string ip_, int port_) : ip(ip_), port(port_) {}
 };
 
+//目的类
 struct destination
 {
     string ip;
@@ -18,6 +20,7 @@ struct destination
     destination(string ip_, int port_) : ip(ip_), port(port_) {}
 };
 
+//连接函数
 connection connect(destination* pDest)
 {
     shared_ptr<connection> pConn(new connection(pDest->ip, pDest->port));
@@ -42,6 +45,7 @@ void f(destination &d)
     connection conn = connect(&d);
     shared_ptr<connection> p(&conn, end_connection);
     cout << "connection now(" << p.use_count() << ")" << endl;
+    //完成后会自动调用end_connection
 }
 
 int main()
