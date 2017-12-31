@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1514725661 source:f:\自学代码\c++ primer\exercise\ch12\strblob\main.cpp
+	"ex12_02.h"
+
+1514726226 f:\自学代码\c++ primer\exercise\ch12\strblob\ex12_02.h
+	<iostream>
+	<vector>
+	<string>
+	<memory>
+	<exception>
+
