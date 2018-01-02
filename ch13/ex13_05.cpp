@@ -18,7 +18,7 @@ public:
         return *this;   //记住返回值
     }
 
-    ~HasPtr() {delete ps;}  //析构函数
+    ~HasPtr() {delete ps;}  //析构函数,因为合成的构造函数不会delete一个指针数据成员，所以需要自己定义析构函数
 private:
     string *ps;
     int i;
