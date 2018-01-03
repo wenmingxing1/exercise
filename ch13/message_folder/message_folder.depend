@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1514986845 source:f:\自学代码\c++ primer\exercise\ch13\message_folder\main.cpp
+	"message_folder.h"
+
+1514986941 f:\自学代码\c++ primer\exercise\ch13\message_folder\message_folder.h
+	<iostream>
+	<string>
+	<set>
+
