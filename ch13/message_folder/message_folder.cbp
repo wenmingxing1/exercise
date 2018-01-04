@@ -33,6 +33,8 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="main.cpp" />
+		<Unit filename="message_folder.cpp" />
+		<Unit filename="message_folder.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
