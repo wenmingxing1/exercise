@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1515155225 source:f:\自学代码\c++ primer\exercise\ch14\14_02\ex14_02.cpp
+	"ex14_02.h"
+
+1515155604 f:\自学代码\c++ primer\exercise\ch14\14_02\ex14_02.h
+	<string>
+	<iostream>
+
+1515155197 source:f:\自学代码\c++ primer\exercise\ch14\14_02\main.cpp
+	"ex14_02.h"
+
