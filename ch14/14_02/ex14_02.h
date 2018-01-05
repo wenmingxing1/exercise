@@ -26,6 +26,13 @@ public:
         revenue = item.revenue;
         return *this;
     }
+    //一个接受string的赋值运算符
+    Sales_data& operator=(const string& str)
+    {
+        bookNo = str;
+        units_sold = 0;
+        revenue = 0.0;
+    }
     Sales_data(istream& is);
 
     Sales_data& operator+=(const Sales_data&);
