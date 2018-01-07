@@ -20,6 +20,12 @@ public:
         return n*price;
     }
 
+    //ex15_11:增加debug虚函数
+    virtual void debug() const
+    {
+        cout << isbn() << " " << price << endl;
+    }
+
     virtual ~Quote() = default; //对析构函数进行动态绑定
 
 private:

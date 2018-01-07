@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1515307925 source:f:\自学代码\c++ primer\exercise\ch15\quote\main.cpp
+	"../ex15_03_Quote.h"
+	"../ex15_05_Bulk_quote.h"
+
+1515307940 f:\自学代码\c++ primer\exercise\ch15\ex15_03_quote.h
+	<string>
+	<iostream>
+
+1515308117 f:\自学代码\c++ primer\exercise\ch15\ex15_05_bulk_quote.h
+	"ex15_03_Quote.h"
+

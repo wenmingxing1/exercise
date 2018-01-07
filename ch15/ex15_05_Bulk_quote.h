@@ -19,6 +19,14 @@ public:
             return n*price;
     }
 
+    //ex15_11:debug虚函数
+    void virtual debug() const override
+    {
+        Quote::debug();     //先调用基类部分
+        cout << min_qty << " " << discount << endl;
+        //cout << isbn() << " " << price << " " << min_qty << " " << discount << endl;
+    }
+
 private:
     size_t min_qty = 0;     //可使用折扣的最小购买数量
     double discount = 0.0;  //折扣额
