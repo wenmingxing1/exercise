@@ -9,8 +9,45 @@ using namespace std;
 class Quote
 {
 public:
-    Quote() = default;
-    Quote(const string& book, double p) : bookNo(book), price(p) { }
+    Quote()
+    {
+        cout << "Quote Constructor" << endl;
+    }
+    //接受两个参数的构造函数
+    Quote(const string& book, double p) : bookNo(book), price(p)
+    {
+        cout << "Quote Constructor taking two parameters" << endl;
+    }
+    //拷贝构造函数
+    Quote(const Quote& item) : bookNo(item.bookNo), price(item.price)
+    {
+        cout << "Quote Copy Constructor" << endl;
+    }
+    //拷贝赋值运算符
+    Quote& operator=(const Quote& item)
+    {
+        bookNo = item.bookNo;
+        price = item.price;
+        cout << "Quote Copy assignment operator" << endl;
+
+        return *this;
+    }
+
+    //移动构造函数
+    Quote(Quote&& item) noexcept : bookNo(std::move(item.bookNo)), price(std::move(item.price))
+    {
+        cout << "Quote Move Constructor" << endl;
+    }
+
+    //移动赋值运算符
+    Quote& operator=(Quote&& item) noexcept
+    {
+        bookNo = std::move(item.bookNo);
+        price = std::move(item.price);
+        cout << "Quote Move assignment operator" << endl;
+
+        return *this;
+    }
 
     string isbn() const {return bookNo;}
 
@@ -26,7 +63,11 @@ public:
         cout << isbn() << " " << price << endl;
     }
 
-    virtual ~Quote() = default; //对析构函数进行动态绑定
+    //对析构函数进行动态绑定
+    virtual ~Quote()
+    {
+        cout << "Quote Destructor" << endl;
+    }
 
 private:
     string bookNo;

@@ -30,6 +30,18 @@ int main()
     print_total(cout, disc_bulk, 5);
     cout << endl << endl;
 
+    cout << "========================ex26=========================" << endl;
+    Quote quote_26;
+    Bulk_quote bulk_quote_26;   //应该输出两个
+
+    Quote quote_26_2("ligang", 23.8);
+    Quote quote_26_3(quote_26_2);
+
+    Quote quote_26_4(std::move(quote_26_2));
+    cout << endl << endl;
+
+
+
 
 
 
