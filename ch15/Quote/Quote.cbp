@@ -32,6 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="../ex15_03_Quote.h" />
+		<Unit filename="../ex15_05_Bulk_quote.h" />
+		<Unit filename="../ex15_15_Disc_Bulk_quote.h" />
+		<Unit filename="../ex15_15_Disc_quote.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
