@@ -1,5 +1,7 @@
 #include "../ex15_03_Quote.h"
 #include "../ex15_05_Bulk_quote.h"
+#include "../ex15_15_Disc_quote.h"
+#include "../ex15_15_Disc_Bulk_quote.h"
 
 int main()
 {
@@ -19,6 +21,13 @@ int main()
     cout << "========================ex11=========================" << endl;
     quote_03.debug();
     bulk.debug();
+    cout << endl << endl;
+
+    cout << "========================ex15=========================" << endl;
+    //Disc_quote test;    //error,测试为实例化抽象基类
+    Disc_Bulk_quote disc_bulk("0-201-78345-X", 23.8, 5, 0.5);
+    cout << "have discount:" << endl;
+    print_total(cout, disc_bulk, 5);
     cout << endl << endl;
 
 
